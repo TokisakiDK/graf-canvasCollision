@@ -1,0 +1,12 @@
+/* Elimina bordes y márgenes por defecto */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita barras de desplazamiento */
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block; /* Elimina espacio extra en la base del canvas */
+}
