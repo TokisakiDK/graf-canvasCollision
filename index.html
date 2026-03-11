@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Círculos Animados Canvas</title>
+    <title>Downloading HPLang | System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <div id="background-global"></div>
+
+    <header id="main-header">
+        <div class="header-content">
+            <h1 class="glitch-text">DOWNLOADING HPLang</h1>
+            <div id="scoreboard">
+                <span class="label">ESTADO DEL SISTEMA:</span> 
+                <div class="score-wrapper">
+                    <span id="contador">0</span> 
+                    <span class="unit">PKT_CAPTURED</span>
+                </div>
+            </div>
+            <button id="btn-reset">REBOOT SYSTEM</button>
+        </div>
+    </header>
+
+    <main id="game-container">
+        <canvas id="canvas"></canvas>
+    </main>
 
     <script src="colision.js"></script>
 </body>

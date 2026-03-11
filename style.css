@@ -1,12 +1,120 @@
+/* Reset general y transparencia del contenedor principal */
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     width: 100%;
     height: 100%;
-    background-color: #121212; /* Fondo oscuro por defecto */
+    background-color: transparent; /* Vital para que se vea el fondo */
+    font-family: 'Consolas', 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* La imagen de fondo de Teto */
+#background-global {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/KTeto.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -10; /* Se asegura de estar detrás de todo */
+    filter: brightness(0.4) contrast(1.1);
+}
+
+/* Header Estilizado */
+#main-header {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(15, 0, 0, 0.85); /* Fondo sólido pero oscuro */
+    border-bottom: 2px solid #ff2d2d;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glitch-text {
+    color: #ff2d2d;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 2px 2px 0px #300000;
+}
+
+#scoreboard {
+    text-align: center;
+}
+
+.label {
+    color: #ff2d2d;
+    font-size: 0.7rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.score-wrapper {
+    background: rgba(255, 45, 45, 0.1);
+    padding: 5px 20px;
+    border: 1px solid #ff2d2d;
+}
+
+#contador {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff2d2d;
+}
+
+.unit {
+    color: #ff2d2d;
+    font-size: 0.8rem;
+    margin-left: 8px;
+}
+
+/* Botón Reboot */
+#btn-reset {
+    background: transparent;
+    color: #ff2d2d;
+    border: 1px solid #ff2d2d;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-reset:hover {
+    background: #ff2d2d;
+    color: #000;
+    box-shadow: 0 0 15px #ff2d2d;
+}
+
+/* Contenedor del Juego (Ventana Ahumada) */
+#game-container {
+    margin-top: 30px;
+    width: 1100px; 
+    height: 600px;
+    border: 2px solid #ff2d2d;
+    /* Usamos transparencia para que el fondo se intuya detrás del canvas */
+    background-color: rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 1;
 }
 
 canvas {
     display: block;
+    cursor: crosshair;
 }
