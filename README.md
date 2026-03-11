@@ -7,12 +7,12 @@
 
 ---
 
-### 💻 2.4 Detección de colisiones
+### 💻 2.4 Detección de colisiones y 2.5 Interactividad 2D
 
 | 👤 Información del Autor | 📋 Detalle |
 | :--- | :--- |
 | **Autor** | `Ramirez Vera David Adolfo` |
-| **Fecha** | 9 de marzo de 2026 |
+| **Fecha** | 9 y 11de marzo de 2026 |
 | **Semestre** | Enero - Junio 2026 |
 
 ---
